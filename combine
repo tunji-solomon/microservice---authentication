@@ -1,0 +1,67 @@
+{"level":"error","message":"Error connecting to database, Error: querySrv ESERVFAIL _mongodb._tcp.cluster0.wa8cg.mongodb.net","service":"auth-service","timestamp":"2025-06-22T21:02:41.889Z"}
+{"level":"error","message":"Error connecting to database, Error: querySrv ESERVFAIL _mongodb._tcp.cluster0.wa8cg.mongodb.net","service":"auth-service","timestamp":"2025-06-22T21:03:17.585Z"}
+{"level":"error","message":"Error connecting to database, Error: queryTxt ESERVFAIL cluster0.wa8cg.mongodb.net","service":"auth-service","timestamp":"2025-06-22T21:03:34.093Z"}
+{"level":"error","message":"Error connecting to database, Error: querySrv ESERVFAIL _mongodb._tcp.cluster0.wa8cg.mongodb.net","service":"auth-service","timestamp":"2025-06-22T21:04:40.846Z"}
+{"level":"error","message":"Error connecting to database, MongooseServerSelectionError: Could not connect to any servers in your MongoDB Atlas cluster. One common reason is that you're trying to access the database from an IP that isn't whitelisted. Make sure your current IP address is on your Atlas cluster's IP whitelist: https://www.mongodb.com/docs/atlas/security-whitelist/","service":"auth-service","timestamp":"2025-06-22T21:08:12.862Z"}
+{"level":"info","message":"Database connected","service":"auth-service","timestamp":"2025-06-22T21:08:24.924Z"}
+{"level":"info","message":"App is running on port: 2000","service":"auth-service","timestamp":"2025-06-22T21:08:24.940Z"}
+{"level":"error","message":"Error connecting to database, Error: querySrv ESERVFAIL _mongodb._tcp.cluster0.wa8cg.mongodb.net","service":"auth-service","timestamp":"2025-06-24T11:52:28.316Z"}
+{"level":"info","message":"Database connected","service":"auth-service","timestamp":"2025-06-24T11:53:09.653Z"}
+{"level":"info","message":"App is running on port: 2000","service":"auth-service","timestamp":"2025-06-24T11:53:10.238Z"}
+{"level":"info","message":"Database connected","service":"auth-service","timestamp":"2025-06-24T11:53:29.659Z"}
+{"level":"info","message":"App is running on port: 2000","service":"auth-service","timestamp":"2025-06-24T11:53:29.666Z"}
+{"level":"info","message":"Database connected","service":"auth-service","timestamp":"2025-06-24T12:11:23.168Z"}
+{"level":"info","message":"App is running on port: 2000","service":"auth-service","timestamp":"2025-06-24T12:11:23.198Z"}
+{"level":"info","message":"Database connected","service":"auth-service","timestamp":"2025-06-24T12:11:38.847Z"}
+{"level":"info","message":"App is running on port: 2000","service":"auth-service","timestamp":"2025-06-24T12:11:38.858Z"}
+{"level":"info","message":"Database connected","service":"auth-service","timestamp":"2025-06-24T12:12:08.145Z"}
+{"level":"info","message":"App is running on port: 2000","service":"auth-service","timestamp":"2025-06-24T12:12:08.157Z"}
+{"level":"error","message":"Error connecting to database, Error: querySrv ESERVFAIL _mongodb._tcp.cluster0.wa8cg.mongodb.net","service":"auth-service","timestamp":"2025-06-24T12:22:18.557Z"}
+{"level":"info","message":"Database connected","service":"auth-service","timestamp":"2025-06-24T12:26:29.323Z"}
+{"level":"info","message":"App is running on port: 2000","service":"auth-service","timestamp":"2025-06-24T12:26:29.333Z"}
+{"level":"error","message":"Error connecting to database, Error: querySrv ESERVFAIL _mongodb._tcp.cluster0.wa8cg.mongodb.net","service":"auth-service","timestamp":"2025-06-24T12:28:52.300Z"}
+{"level":"info","message":"Database connected","service":"auth-service","timestamp":"2025-06-24T12:32:07.813Z"}
+{"level":"info","message":"App is running on port: 2000","service":"auth-service","timestamp":"2025-06-24T12:32:08.018Z"}
+{"level":"error","message":"Error connecting to database, Error: queryTxt ESERVFAIL cluster0.wa8cg.mongodb.net","service":"auth-service","timestamp":"2025-06-24T12:34:03.752Z"}
+{"level":"info","message":"Database connected","service":"auth-service","timestamp":"2025-06-24T12:34:18.194Z"}
+{"level":"info","message":"App is running on port: 2000","service":"auth-service","timestamp":"2025-06-24T12:34:18.208Z"}
+{"level":"info","message":"Database connected","service":"auth-service","timestamp":"2025-06-24T12:34:37.370Z"}
+{"level":"info","message":"App is running on port: 2000","service":"auth-service","timestamp":"2025-06-24T12:34:37.385Z"}
+{"level":"info","message":"Database connected","service":"auth-service","timestamp":"2025-06-24T12:36:47.652Z"}
+{"level":"info","message":"App is running on port: 2000","service":"auth-service","timestamp":"2025-06-24T12:36:47.665Z"}
+{"level":"info","message":"Database connected","service":"auth-service","timestamp":"2025-06-24T12:44:45.084Z"}
+{"level":"info","message":"App is running on port: 2000","service":"auth-service","timestamp":"2025-06-24T12:44:45.091Z"}
+{"level":"error","message":"Error connecting to database, Error: queryTxt ESERVFAIL cluster0.wa8cg.mongodb.net","service":"auth-service","timestamp":"2025-06-24T12:45:56.954Z"}
+{"level":"info","message":"Database connected","service":"auth-service","timestamp":"2025-06-24T12:55:25.318Z"}
+{"level":"info","message":"App is running on port: 2000","service":"auth-service","timestamp":"2025-06-24T12:55:25.340Z"}
+{"level":"error","message":"Error connecting to database, Error: querySrv ESERVFAIL _mongodb._tcp.cluster0.wa8cg.mongodb.net","service":"auth-service","timestamp":"2025-06-24T12:58:17.566Z"}
+{"level":"info","message":"Database connected","service":"auth-service","timestamp":"2025-06-24T12:58:48.957Z"}
+{"level":"info","message":"App is running on port: 2000","service":"auth-service","timestamp":"2025-06-24T12:58:49.166Z"}
+{"level":"info","message":"Database connected","service":"auth-service","timestamp":"2025-06-24T13:15:37.605Z"}
+{"level":"info","message":"App is running on port: 2000","service":"auth-service","timestamp":"2025-06-24T13:15:38.489Z"}
+{"level":"error","message":"Something went wrong user.toJson is not a function","service":"auth-service","stack":"TypeError: user.toJson is not a function\n    at AuthService.register (C:\\development\\teejay\\MICROSERVICE-PROJECT\\auth-service\\src\\service\\auth.ts:38:14)\n    at processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async register (C:\\development\\teejay\\MICROSERVICE-PROJECT\\auth-service\\src\\controller\\auth.ts:19:26)","timestamp":"2025-06-24T13:17:03.525Z"}
+{"level":"error","message":"Error connecting to database, Error: querySrv ESERVFAIL _mongodb._tcp.cluster0.wa8cg.mongodb.net","service":"auth-service","timestamp":"2025-06-24T13:17:51.629Z"}
+{"level":"error","message":"Error connecting to database, Error: queryTxt ESERVFAIL cluster0.wa8cg.mongodb.net","service":"auth-service","timestamp":"2025-06-24T13:18:07.412Z"}
+{"level":"info","message":"Database connected","service":"auth-service","timestamp":"2025-06-24T13:18:38.647Z"}
+{"level":"info","message":"App is running on port: 2000","service":"auth-service","timestamp":"2025-06-24T13:18:38.685Z"}
+{"level":"info","message":"Username already exist","service":"auth-service","timestamp":"2025-06-24T13:18:46.331Z"}
+{"level":"info","message":"Email already exist","service":"auth-service","timestamp":"2025-06-24T13:19:17.346Z"}
+{"level":"info","message":"New user created successfully","service":"auth-service","timestamp":"2025-06-24T13:20:00.218Z"}
+{"level":"error","message":"Error connecting to database, Error: querySrv ESERVFAIL _mongodb._tcp.cluster0.wa8cg.mongodb.net","service":"auth-service","timestamp":"2025-06-24T13:22:51.290Z"}
+{"level":"error","message":"Error connecting to database, MongooseServerSelectionError: Could not connect to any servers in your MongoDB Atlas cluster. One common reason is that you're trying to access the database from an IP that isn't whitelisted. Make sure your current IP address is on your Atlas cluster's IP whitelist: https://www.mongodb.com/docs/atlas/security-whitelist/","service":"auth-service","timestamp":"2025-06-24T13:29:31.238Z"}
+{"level":"error","message":"Error connecting to database, Error: queryTxt ESERVFAIL cluster0.wa8cg.mongodb.net","service":"auth-service","timestamp":"2025-06-24T13:42:54.023Z"}
+{"level":"info","message":"Database connected","service":"auth-service","timestamp":"2025-06-24T13:43:23.354Z"}
+{"level":"info","message":"App is running on port: 2000","service":"auth-service","timestamp":"2025-06-24T13:43:23.379Z"}
+{"level":"info","message":"Username already exist","service":"auth-service","timestamp":"2025-06-24T13:43:31.275Z"}
+{"level":"info","message":"Email already exist","service":"auth-service","timestamp":"2025-06-24T13:43:38.584Z"}
+{"level":"info","message":"New user created successfully","service":"auth-service","timestamp":"2025-06-24T13:43:46.414Z"}
+{"level":"info","message":"Database connected","service":"auth-service","timestamp":"2025-06-24T13:45:51.986Z"}
+{"level":"info","message":"App is running on port: 2000","service":"auth-service","timestamp":"2025-06-24T13:45:52.020Z"}
+{"level":"info","message":"Username already exist","service":"auth-service","timestamp":"2025-06-24T13:46:36.985Z"}
+{"level":"error","message":"Error connecting to database, Error: querySrv ESERVFAIL _mongodb._tcp.cluster0.wa8cg.mongodb.net","service":"auth-service","timestamp":"2025-06-24T13:47:11.905Z"}
+{"level":"error","message":"Error connecting to database, Error: querySrv ESERVFAIL _mongodb._tcp.cluster0.wa8cg.mongodb.net","service":"auth-service","timestamp":"2025-06-24T13:51:47.393Z"}
+{"level":"info","message":"Database connected","service":"auth-service","timestamp":"2025-06-24T13:52:05.539Z"}
+{"level":"info","message":"App is running on port: 2000","service":"auth-service","timestamp":"2025-06-24T13:52:05.563Z"}
+{"level":"info","message":"New user created successfully","service":"auth-service","timestamp":"2025-06-24T13:52:58.205Z"}
+{"level":"info","message":"Database connected","service":"auth-service","timestamp":"2025-06-24T13:55:41.182Z"}
+{"level":"info","message":"App is running on port: 2000","service":"auth-service","timestamp":"2025-06-24T13:55:41.195Z"}
