@@ -14,6 +14,10 @@ class AuthRepo {
         return await UserModel.findOne({$or: [{username: parameter}, {email: parameter}]}).select("_id username email")
     }
 
+    async getUserPassword (username: any): Promise<any> {
+        return await UserModel.findOne({username})
+    }
+
     async updateOne (payload: any): Promise<any> {
         return await UserModel.findByIdAndUpdate({_id: payload.id}, {username: payload.username, email: payload.email})
     }

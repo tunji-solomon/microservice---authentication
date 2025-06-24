@@ -1,4 +1,4 @@
-import { AuthRepo } from "../repositories";
+import { AuthRepo, RefreshTokenRepo } from "../repositories";
 import { Response } from "express";
 import { logger } from "../utils";
 import { Tools } from "../utils";
@@ -6,9 +6,11 @@ import { Tools } from "../utils";
 class AuthService {
 
     private readonly authRepo: any;
+    private readonly refreshTokenRepo: any
 
     constructor(){
         this.authRepo = new AuthRepo();
+        this.refreshTokenRepo = new RefreshTokenRepo()
     }
 
     async register(payload: any, res: Response): Promise<object> {
@@ -42,6 +44,56 @@ class AuthService {
             status: "Success",
             message: "User registration successfully",
             data: user
+        })
+    }
+
+    async login (payload: any, res: Response): Promise<object> {
+
+        const { username, password } = payload;
+        // get user details by username
+        const user = await this.authRepo.getUserPassword(username);
+        if(!user) {
+            logger.warn("Username does not exist")
+            return res.status(404).json({
+            status: "Failed",
+            message: "User with username does not exist"
+            })
+        }
+        logger.info(user)
+        // compare password supplied
+        const comparePassword = await Tools.comparePassword(password, user.password);
+        if(!comparePassword) {
+            logger.warn("Incorrect password provided")
+            return res.status(400).json({
+                status: "Failed",
+                message: "Incorrect password provided"
+            })
+        }
+        // generate access token and refresh token
+        const {accessToken, refreshToken, expiresAt } = Tools.generateTokens(
+            {
+                id: user.id,
+                username: user.username,
+                email: user.email
+            },
+            "30min"
+        )
+
+        const refreshTokenPayload = {
+            refreshToken,
+            expiresAt,
+            user: user.id
+        }
+        // save refresh token in the database
+        await this.refreshTokenRepo.create(refreshTokenPayload)
+
+        logger.info("User login successfully")
+        // return tokens to client
+        return res.status(200).json({
+            status: "Success",
+            message: "Login successful",
+            accessToken,
+            refreshToken
         })
     }
 }

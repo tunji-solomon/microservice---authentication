@@ -1,5 +1,8 @@
 import bcrypt from "bcryptjs";
 import { env } from "../config";
+import jwt from "jsonwebtoken"
+import logger from "./logger";
+import crypto from 'crypto'
 
 export const hashPassword = async (password: string): Promise<string> => {
 
@@ -10,4 +13,39 @@ export const hashPassword = async (password: string): Promise<string> => {
     return hashedPassword
 
 }
+
+export const comparePassword = async (plainPassword: string, hashedPassword: string): Promise<boolean> => {
+    return await bcrypt.compare(plainPassword, hashedPassword)
+}
+
+export const generateTokens = (payload: any, time: any) : any => {
+    const accessToken = jwt.sign(payload, String(env.JWT_SECRET), { expiresIn : time})
+
+    const refreshToken = crypto.randomBytes(50).toString("hex")
+    const expiresAt = new Date()
+    expiresAt.setDate(expiresAt.getDate() + 5)
+
+    const tokens = {
+        accessToken,
+        refreshToken,
+        expiresAt
+    }
+
+    return tokens
+    
+
+}
+
+export const checkToken = (req: any) : any => {
+
+    const header = req.header;
+    if(header.authorization && header.authorization.split[0] == "Bearer"){
+        const token: string = header.authorization.split()[1]
+        return token
+    }
+
+    return null
+}
+
+
 

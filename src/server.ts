@@ -1,5 +1,5 @@
 import { connectDb } from "./datasource";
-import express, { Express} from "express";
+import express, { Express, NextFunction} from "express";
 import { env } from "./config";
 import router  from './routes';
 import { logger } from "./utils";
@@ -20,6 +20,10 @@ const PORT : Number = Number(env.PORT)  || 2000;
 })
 })()
 
+app.use((req: any,res: any, next: NextFunction) => {
+    logger.info(`${req.method}: ${req.url} -> ${new Date()}`);
+    next()
+})
 // Home url
 app.get("/api/v1", (req: any, res: any) => {
     res.status(200).json({

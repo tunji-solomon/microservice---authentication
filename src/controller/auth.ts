@@ -25,5 +25,19 @@ export const register = async (req: Request, res: Response): Promise<any> => {
             message: "Something went wrong, Try again later"
         })
     }
+}
 
+export const login = async (req: Request, res: Response): Promise<any> => {
+
+    try {
+
+        const register = await AuthService.login(req.body, res) 
+        return register;
+    } catch (error) {
+        logger.error("Something went wrong", error)
+        return res.status(400).json({
+            status: "Failed",
+            message: "Something went wrong, Try again later"
+        })
+    }
 }
