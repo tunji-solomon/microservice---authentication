@@ -1,7 +1,7 @@
 import mongoose from "mongoose";
 
 const refreshTokenSchema = new mongoose.Schema({
-    token : {
+    refreshToken : {
         type: String,
         required: true,
         unique: true
@@ -13,7 +13,7 @@ const refreshTokenSchema = new mongoose.Schema({
         required: true,
     },
 
-    createdAt: {
+    expiresAt: {
         type: Date,
         required: true
     }

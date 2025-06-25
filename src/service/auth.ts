@@ -59,7 +59,6 @@ class AuthService {
             message: "User with username does not exist"
             })
         }
-        logger.info(user)
         // compare password supplied
         const comparePassword = await Tools.comparePassword(password, user.password);
         if(!comparePassword) {
@@ -76,16 +75,15 @@ class AuthService {
                 username: user.username,
                 email: user.email
             },
-            "30min"
+            "1hr"
         )
 
-        const refreshTokenPayload = {
+        // save refresh token in the database
+        await this.refreshTokenRepo.create( {
             refreshToken,
             expiresAt,
             user: user.id
-        }
-        // save refresh token in the database
-        await this.refreshTokenRepo.create(refreshTokenPayload)
+        })
 
         logger.info("User login successfully")
         // return tokens to client
@@ -94,6 +92,27 @@ class AuthService {
             message: "Login successful",
             accessToken,
             refreshToken
+        })
+    }
+
+    async updateUser (payload: any, res: Response): Promise<object> {
+
+        const { username, email } = payload
+
+        const { id } = res.locals
+
+        const user = await this.authRepo.findById(id);
+
+        const updatedUser = await this.authRepo.updateOne(id,{
+            username: username || user.username,
+            email: email || user.email
+        })
+
+        logger.info("User records updated successfully")
+        return res.status(201).json({
+            status:"Success",
+            message: "User records updated",
+            updatedUser
         })
     }
 }

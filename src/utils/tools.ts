@@ -32,19 +32,22 @@ export const generateTokens = (payload: any, time: any) : any => {
     }
 
     return tokens
-    
 
 }
 
 export const checkToken = (req: any) : any => {
 
-    const header = req.header;
-    if(header.authorization && header.authorization.split[0] == "Bearer"){
-        const token: string = header.authorization.split()[1]
+    const header = req.headers?.authorization
+    if(header&& header.split(" ")[0] == "Bearer"){
+        const token: string = header.split(" ")[1]
         return token
     }
 
     return null
+}
+
+export const verifyToken = (token: string): any => {
+    return jwt.verify(token, String(env.JWT_SECRET))
 }
 
 

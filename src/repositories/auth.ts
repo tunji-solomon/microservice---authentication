@@ -18,8 +18,11 @@ class AuthRepo {
         return await UserModel.findOne({username})
     }
 
-    async updateOne (payload: any): Promise<any> {
-        return await UserModel.findByIdAndUpdate({_id: payload.id}, {username: payload.username, email: payload.email})
+    async updateOne (id: string, payload: any): Promise<any> {
+        return await UserModel.findByIdAndUpdate({_id: id}, {
+            username : payload.username,
+            email : payload.email
+        }, { new : true}).select("username email _id")
     }
 }
 
