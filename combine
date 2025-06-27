@@ -315,3 +315,28 @@
 {"level":"info","message":"User records updated successfully","service":"auth-service","timestamp":"2025-06-25T18:20:05.015Z"}
 {"level":"info","message":"POST: /api/v1/auth/login -> Wed Jun 25 2025 19:20:15 GMT+0100 (West Africa Standard Time)","service":"auth-service","timestamp":"2025-06-25T18:20:15.739Z"}
 {"level":"warn","message":"Username does not exist","service":"auth-service","timestamp":"2025-06-25T18:20:15.898Z"}
+{"level":"info","message":"Database connected","service":"auth-service","timestamp":"2025-06-26T04:12:13.360Z"}
+{"level":"info","message":"App is running on port: 2000","service":"auth-service","timestamp":"2025-06-26T04:12:13.373Z"}
+{"level":"info","message":"PUT: /api/v1/auth/update -> Thu Jun 26 2025 05:12:33 GMT+0100 (West Africa Standard Time)","service":"auth-service","timestamp":"2025-06-26T04:12:33.366Z"}
+{"level":"info","message":"POST: /api/v1/auth/login -> Thu Jun 26 2025 05:12:54 GMT+0100 (West Africa Standard Time)","service":"auth-service","timestamp":"2025-06-26T04:12:54.954Z"}
+{"level":"warn","message":"Username does not exist","service":"auth-service","timestamp":"2025-06-26T04:12:55.135Z"}
+{"level":"info","message":"POST: /api/v1/auth/login -> Thu Jun 26 2025 05:13:00 GMT+0100 (West Africa Standard Time)","service":"auth-service","timestamp":"2025-06-26T04:13:00.880Z"}
+{"level":"info","message":"User login successfully","service":"auth-service","timestamp":"2025-06-26T04:13:01.917Z"}
+{"level":"info","message":"PUT: /api/v1/auth/update -> Thu Jun 26 2025 05:13:27 GMT+0100 (West Africa Standard Time)","service":"auth-service","timestamp":"2025-06-26T04:13:27.596Z"}
+{"level":"info","message":"User records updated successfully","service":"auth-service","timestamp":"2025-06-26T04:13:28.059Z"}
+{"level":"info","message":"POST: /api/v1/auth/login -> Thu Jun 26 2025 05:13:40 GMT+0100 (West Africa Standard Time)","service":"auth-service","timestamp":"2025-06-26T04:13:40.698Z"}
+{"level":"warn","message":"Username does not exist","service":"auth-service","timestamp":"2025-06-26T04:13:40.863Z"}
+{"level":"info","message":"POST: /api/v1/auth/login -> Thu Jun 26 2025 05:13:47 GMT+0100 (West Africa Standard Time)","service":"auth-service","timestamp":"2025-06-26T04:13:47.891Z"}
+{"level":"error","message":"Something went wrong this.refreshTokenRepo.findByIdAndDelete is not a function","service":"auth-service","stack":"TypeError: this.refreshTokenRepo.findByIdAndDelete is not a function\n    at AuthService.login (C:\\development\\teejay\\MICROSERVICE-PROJECT\\auth-service\\src\\service\\auth.ts:83:41)\n    at processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async login (C:\\development\\teejay\\MICROSERVICE-PROJECT\\auth-service\\src\\controller\\auth.ts:34:23)","timestamp":"2025-06-26T04:13:48.621Z"}
+{"level":"info","message":"Database connected","service":"auth-service","timestamp":"2025-06-26T04:15:07.902Z"}
+{"level":"info","message":"App is running on port: 2000","service":"auth-service","timestamp":"2025-06-26T04:15:07.911Z"}
+{"level":"info","message":"POST: /api/v1/auth/login -> Thu Jun 26 2025 05:15:16 GMT+0100 (West Africa Standard Time)","service":"auth-service","timestamp":"2025-06-26T04:15:16.745Z"}
+{"level":"info","message":"User login successfully","service":"auth-service","timestamp":"2025-06-26T04:15:18.055Z"}
+{"level":"info","message":"PUT: /api/v1/auth/update -> Thu Jun 26 2025 05:17:03 GMT+0100 (West Africa Standard Time)","service":"auth-service","timestamp":"2025-06-26T04:17:03.340Z"}
+{"level":"info","message":"User records updated successfully","service":"auth-service","timestamp":"2025-06-26T04:17:03.659Z"}
+{"level":"info","message":"PUT: /api/v1/auth/update -> Thu Jun 26 2025 05:17:30 GMT+0100 (West Africa Standard Time)","service":"auth-service","timestamp":"2025-06-26T04:17:30.907Z"}
+{"level":"info","message":"User records updated successfully","service":"auth-service","timestamp":"2025-06-26T04:17:31.272Z"}
+{"level":"info","message":"POST: /api/v1/auth/login -> Thu Jun 26 2025 05:17:41 GMT+0100 (West Africa Standard Time)","service":"auth-service","timestamp":"2025-06-26T04:17:41.075Z"}
+{"level":"warn","message":"Username does not exist","service":"auth-service","timestamp":"2025-06-26T04:17:41.240Z"}
+{"level":"info","message":"POST: /api/v1/auth/login -> Thu Jun 26 2025 05:17:48 GMT+0100 (West Africa Standard Time)","service":"auth-service","timestamp":"2025-06-26T04:17:48.022Z"}
+{"level":"info","message":"User login successfully","service":"auth-service","timestamp":"2025-06-26T04:17:49.223Z"}

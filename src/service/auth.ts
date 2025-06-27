@@ -77,8 +77,13 @@ class AuthService {
             },
             "1hr"
         )
+        //check for existing refresh token and delete
+        const existingRefreshToken = await this.refreshTokenRepo.findOne(user.id)
+        if (existingRefreshToken){
+            await this.refreshTokenRepo.deleteOne(existingRefreshToken.id)
+        }
 
-        // save refresh token in the database
+        // save new refresh token in the database
         await this.refreshTokenRepo.create( {
             refreshToken,
             expiresAt,
