@@ -18,6 +18,7 @@ export const register = async (req: Request, res: Response): Promise<any> => {
         }
         const register = await AuthService.register(req.body, res) 
         return register;
+
     } catch (error) {
         logger.error("Something went wrong", error)
         return res.status(400).json({
@@ -33,6 +34,7 @@ export const login = async (req: Request, res: Response): Promise<any> => {
 
         const login = await AuthService.login(req.body, res) 
         return login;
+
     } catch (error) {
         logger.error("Something went wrong", error)
         return res.status(400).json({
@@ -48,6 +50,7 @@ export const update = async (req: Request, res: Response): Promise<any> => {
 
         const update = await AuthService.updateUser(req.body, res) 
         return update;
+        
     } catch (error) {
         logger.error("Something went wrong", error)
         return res.status(400).json({

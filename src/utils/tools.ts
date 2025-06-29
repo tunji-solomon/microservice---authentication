@@ -1,8 +1,7 @@
 import bcrypt from "bcryptjs";
 import { env } from "../config";
-import jwt from "jsonwebtoken"
-import logger from "./logger";
-import crypto from 'crypto'
+import jwt from "jsonwebtoken";
+import crypto from 'crypto';
 
 export const hashPassword = async (password: string): Promise<string> => {
 
